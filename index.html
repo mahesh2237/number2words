@@ -2,19 +2,58 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>NumbertoWords</title>
+<title>number2words.js</title>
+<style>
+body{
+	font-family:Helvetica, Arial, sans-serif
+}
+p.center{
+	text-align:center;
+	width:70%;
+	margin-left:15%;
+}
+</style>
 </head>
-
 <body>
-<input type="text" name="num" id="num" maxlength="9">
-<button onClick="myfun()">check</button>
-<script src="number2words.js"></script>
+<header><h1 align="center">number2words.js</h1><hr></header>
+<div class="main">
+<p class="center">number2words.js is a very simple javascript plugin which change number in words for example:-<br> 
+if you have a number 123 , that plugin change this to words( "one hundred twenty two").
+</p>
+<h2>number2words() :- </h2>
+<hr>
+<p>
+number2words() is a core function of that pluglin. it's carry a number as argument.<br>
+if you simply call <code>number2words(23)</code>, it's return " twenty three".
+</p>
+<hr>
+<h2>Try here</h2>
+<hr>
+<p class="center">
+<table>
+<tr>
+<td><label>Input</label></td><td><input type="text" name="num" id="num" maxlength="9"><button onClick="myfun()">check</button></td>
+</tr>
+<tr>
+<td><label>Output</label></td><td><textarea id="output" rows="5" cols="50"></textarea></td>
+</tr>
+</table>
+</p>
+<hr>
+<p class="center">
+developed by <a href="https://www.facebook.com/mahesh.sain">Mahesh Sain</a>.
+</p>
+</div>
+<script src="number2words.min.js"></script>
 <script>
 function myfun()
 {
 	var num = document.getElementById("num").value;
-	alert(number2words(num));
+	var output = document.getElementById("output");
+	output.innerHTML=number2words(num);
+	
 }
+
 
 </script>
 </body>
